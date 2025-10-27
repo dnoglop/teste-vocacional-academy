@@ -28,11 +28,15 @@
 .delay-700 { animation-delay: 0.7s; }
 .delay-800 { animation-delay: 0.8s; }
 
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 /* From Uiverse.io by dovatgabriel */ 
 .newtons-cradle {
  --uib-size: 50px;
  --uib-speed: 1.2s;
- --uib-color: #474554; /* Ajustado para combinar com o tema */
+ --uib-color: #f97316; /* Ajustado para laranja */
  position: relative;
  display: flex;
  align-items: center;
