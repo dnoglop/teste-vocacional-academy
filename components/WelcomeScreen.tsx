@@ -8,7 +8,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
   return (
     <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center min-h-screen-75vh p-4 md:p-8 text-center overflow-hidden">
+      <section className="relative flex items-center justify-center min-h-screen-75vh p-4 md:p-8 text-center md:text-left overflow-hidden">
         {/* Subtle background gradient/blob for visual interest */}
         <div className="absolute inset-0 z-0 opacity-10">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
@@ -16,20 +16,32 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
           <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
         </div>
         
-        <div className="relative z-10 max-w-4xl mx-auto space-y-6">
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 animate-fade-in-up">
-            Descubra seu Caminho Profissional, do seu Jeito.
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto animate-fade-in-up delay-100">
-            Um teste vocacional cientificamente embasado, inclusivo e contextualizado para a realidade brasileira.
-          </p>
-          <button 
-            onClick={onStart} 
-            className="mt-8 px-12 py-4 text-lg font-bold text-white bg-indigo-600 rounded-full hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg animate-fade-in-up delay-200"
-          >
-            Começar meu teste
-          </button>
-          <p className="text-sm text-gray-500 animate-fade-in-up delay-300">Tempo estimado: ~10 minutos</p>
+        <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+          {/* Left Column: Text and Button */}
+          <div className="space-y-6">
+            <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 animate-fade-in-up">
+              Descubra seu Caminho Profissional, do seu Jeito.
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-xl animate-fade-in-up delay-100">
+              Um teste vocacional cientificamente embasado, inclusivo e contextualizado para a realidade brasileira.
+            </p>
+            <button 
+              onClick={onStart} 
+              className="mt-8 px-12 py-4 text-lg font-bold text-white bg-indigo-600 rounded-full hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transform hover:scale-105 transition-all duration-300 ease-in-out shadow-lg animate-fade-in-up delay-200"
+            >
+              Começar meu teste
+            </button>
+            <p className="text-sm text-gray-500 animate-fade-in-up delay-300">Tempo estimado: ~10 minutos</p>
+          </div>
+
+          {/* Right Column: Image */}
+          <div className="hidden md:flex justify-center items-center animate-fade-in-up delay-400">
+            <img 
+              src="https://via.placeholder.com/600x400?text=Imagem+Ilustrativa" 
+              alt="Pessoas diversas colaborando e aprendendo" 
+              className="rounded-2xl shadow-xl max-h-[400px] w-full object-cover"
+            />
+          </div>
         </div>
       </section>
 
