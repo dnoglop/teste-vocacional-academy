@@ -21,10 +21,10 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onStart }) => {
           {/* Left Column: Text and Button */}
           <div className="space-y-6">
             <h1 className="text-5xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600 animate-fade-in-up">
-              Descubra seu Caminho Profissional, do seu Jeito.
+              Pare de adivinhar. Descubra o seu caminho profissional.
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-xl animate-fade-in-up delay-100">
-              Um teste vocacional cientificamente embasado, inclusivo e contextualizado para a realidade brasileira.
+              Cientificamente criado para revelar o que realmente combina com você.
             </p>
             <button 
               onClick={onStart} 
